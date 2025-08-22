@@ -1,4 +1,4 @@
-log_file = "/Users/ronakkhatwani/Downloads/timetable.txt"  
+log_file = "Logfile.txt"  
 
 total_requests = 0
 endpoint_hits = {}
@@ -42,7 +42,7 @@ with open(log_file, "r", errors="ignore") as f:
         #Detect unique users
         if "[" in line and "]" in line:
             content = line.split("[")[-1].split("]")[0]
-            if len(content) ==12 and content[:4].isdigit():
+            if len(content) ==13 and content[:4].isdigit():
                 users.add(content)
                 year = content[:4]
                 add_count(users_by_year, year)
